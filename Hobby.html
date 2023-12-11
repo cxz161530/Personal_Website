@@ -27,57 +27,48 @@
                 <li class="nav-item" >
                     <a href="Contact.html">Contact</a> 
                 </li>
-                <li class="nav-item" >
-                    <a href="Message.html">Message</a>
-                </li>
+               
             </ul>
         </nav>
-        <div id="'logo-container">
+        <div id="logo-container">
             <img id="logo" src="./Pictures/photocz.jpeg" alt="Chaozheng's_Picture">
-            <h1 id="logo-text">Chaozheng(Frank) Zhu</h1>
+            <h1 id="logo-text">Hobbies</h1>
         </div>
 
     </header>
     
     <main>
-            <h1>Contact Me</h1>
-            <img id= picture_display src="./Pictures/Juicy.jpg" alt="Juicy's_Picture">  </p>
+            
+            <p><img id= picture_display src="./Pictures/Juicy.jpg" alt="Juicy's_Picture">  </p>
             <section>
-                <h1>Welcome to my page</h1>
+                
                 <article>
                     <p>
                         Currently, I'm a software development student at Boston University where I am getting solid programming knowledge.
                     </p><p>
                         Previously, I was a demand planning manager at Onsemi supporting semiconductors supply chain management.
                      </p><p>    
-                        When I am not working, I enjoy going to the beach, being in nature and spending time with my puppy Juicy.
+                        When I am not working, I enjoy going to the beach, being in nature and spending time with my puppy Juicy and cat Kubda.
                         </p>
-                        <p>
-                       
-            <section>
-            
-            
-            
-            <div>
-                <form>
-                    <div class="form-controls">
-                        <label for="name">Full Name</label>
-                        <input name="name" id="name">
-                    </div>
-                    <div class="form-controls">
-                        <label for="email">Email</label>
-                        <input name="email" id="email">
-                    </div>
-                    <div class="form-controls">
-                        <label for="message">Your Message</label>
-                        <textarea name="message" id="message"></textarea>
-                    </div>
-                    <div class="form-controls">
-                        <button type="submit" name="submit">Submit</button>
-                        <button type="reset" name="reset">Reset</button>
-                    </div>
-                </form>
+                </article>
+            </section>
+           
+            <h1>Guess How Many Years Apart Between 2 Pictures</h1>
+
+            <div id="app">
+              <img :src="pictureHover" @mouseover="hover = true" @mouseleave="hover = false"/>
+              <button @click="loadNextImages" class="gold-button">{{ isNextButton ? 'Next' : 'Back' }}</button>
+              <label for="yearsApart">2 Pictures Years Apart :</label>
+              <input type="number" id="yearsApart" v-model="yearsApart" />
+              <button @click="checkYearsApart">Check</button>
+              <p v-if="yearsApartCorrect">Correct!</p>
+              <p v-else>Incorrect. Try again.</p>
             </div>
+          
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+          <script src="app.js"></script>
+
     </main>
 
     <footer>
